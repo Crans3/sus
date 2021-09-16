@@ -14,7 +14,8 @@ body{
     height:100vh;
     background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(Pictures/Background.png);
     background-size:cover;
-    background-position: 0px;
+    background-position-x: center;
+    background-position-y: center;
 }        
 
 .area-scritta{
@@ -26,11 +27,37 @@ body{
 
 .scritta{
     text-align: center;
+    animation: animate 2s linear forwards;
+    animation-fill-mode: forwards;
 }
 
 .scritta h1{
     font-size:70px;
     color:#fff;
+}
+
+@keyframes animate{
+    0%{
+        height: 180px;
+        opacity: 0;
+    }
+    10%{
+        height: 160px;
+        opacity: 0;
+    }
+    20%{
+        height: 140px;
+    }
+    30%{
+        height: 120px;
+    }
+    40%{
+        height: 100px;
+    }
+    60%{
+        height: 80px;
+        opacity: 1;
+    }
 }
 
 footer {
